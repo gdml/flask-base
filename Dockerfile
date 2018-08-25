@@ -10,3 +10,6 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && rm dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
 RUN pip --no-cache-dir install uwsgi
+
+ONBUILD ADD requirements.txt /
+ONBUILD run pip --no-cache-dir install -r /requirements.txt
