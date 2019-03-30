@@ -1,6 +1,6 @@
 FROM python:3.6-alpine
 LABEL maintainer="fb@gdml.ru"
-LABEL com.datadoghq.ad.logs='[{"source": "uwsgi", "service": "flask"}]
+LABEL com.datadoghq.ad.logs='[{"source": "uwsgi", "service": "flask"}]'
 
 ENV DOCKERIZE_VERSION v0.6.1
 
