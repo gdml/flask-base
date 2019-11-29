@@ -6,9 +6,10 @@
 ```docker
 FROM gdml/flask -base
 
-WORKDIR /srv
+ADD src /srv
+WORKDIR /
 
-CMD ["uwsgi", "--http", ":8000", "--module", "srv.app", "--workers", "2", "--threads", "2"]
+CMD ["uwsgi", "--http", ":8000", "--module", "srv.app:app", "--workers", "2", "--threads", "2"]
 ```
 
 Your `requirements.txt` should be located in the same folder as the Dockerfile.
