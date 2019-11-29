@@ -8,11 +8,6 @@ FROM gdml/flask -base
 
 WORKDIR /srv
 
-ADD . /srv
-RUN ./manage.py compilemessages
-RUN ./manage.py collectstatic --noinput
-
-# Prod machine
 CMD ["uwsgi", "--http", ":8000", "--module", "srv.app", "--workers", "2", "--threads", "2"]
 ```
 
