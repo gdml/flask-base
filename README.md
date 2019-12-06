@@ -15,7 +15,7 @@ CMD ["uwsgi", "--http", ":8000", "--module", "srv.app:app", "--workers", "2", "-
 Your `requirements.txt` should be located in the same folder as the Dockerfile.
 
 ## Contents
-* Python 3.6 (based on official alpine images)
+* Python 3.7 (based on official alpine images)
 * UWSGI
 * [dockerize](https://github.com/jwilder/dockerize)
 
