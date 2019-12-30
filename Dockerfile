@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3.7.6-alpine3.11
 LABEL maintainer="fb@gdml.ru"
 LABEL com.datadoghq.ad.logs='[{"source": "uwsgi", "service": "flask"}]'
 
